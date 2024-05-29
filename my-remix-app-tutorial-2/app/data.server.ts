@@ -74,7 +74,7 @@ export async function getContacts(q?: string | null) {
   })
 
   try {
-    const response = await fetch(`/api/contacts?${query}`)
+    const response = await fetch(`${url}/api/contacts?${query}`)
     const data = await response.json();
 
     return flattenAttributes(data.data);
